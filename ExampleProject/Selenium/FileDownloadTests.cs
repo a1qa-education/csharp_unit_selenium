@@ -18,7 +18,7 @@ namespace ExampleProject.Selenium
         public void FileDownloadTest()
         {
             driver.FindElement(fileDownloadBtn).Click();
-            Assert.True(driver.FindElement(fileNameField).Displayed, "File is not displayed");
+            Assert.That(driver.FindElement(fileNameField).Displayed, Is.True, "File is not displayed");
             driver.FindElement(fileNameField).Click();
             //assert the file is downloaded
         }
