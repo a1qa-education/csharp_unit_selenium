@@ -7,7 +7,6 @@ namespace ExampleProject.Selenium
     {
         private static readonly By sortableDataTables = By.XPath(string.Format(preciseTextXpath, "Sortable Data Tables"));
 
-
         [Test]
         public void DataTableTest()
         {

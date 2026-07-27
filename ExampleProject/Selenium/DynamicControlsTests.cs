@@ -13,6 +13,7 @@ namespace ExampleProject.Selenium
         {
             driver.FindElement(dynamicControl).Click();
             driver.FindElement(enableBtn).Click();
+
             //assert input is enabled
             //input randomly generated text
             //assert input text

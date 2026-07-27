@@ -1,0 +1,66 @@
+## .NET 10 / Visual Studio / Selenium Training Center Standard .gitignore
+
+# --- Build Artifacts ---
+[Bb]in/
+[Oo]bj/
+# .NET 8+ often uses a centralized artifacts folder if configured
+artifacts/
+publish/
+
+# --- IDE - Visual Studio ---
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+# Debugger/Profiler files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.pdb
+
+# --- IDE - VS Code ---
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# --- Test Results & Coverage ---
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+# Coverlet / Allure coverage folders
+coverlet/
+allure-results/
+allure-report/
+
+# --- Automation Specifics (Selenium/Aquality) ---
+# Ignore local driver logs (chromedriver.log, etc.)
+*.log
+logs/
+# Prevent accidental commit of local browser profiles
+browser-profiles/
+# Ignore temporary downloads during tests
+TestDownloads/
+
+# --- Configuration & Secrets ---
+# Crucial: Don't let students commit local settings or secrets
+Resources/settings.local.json
+appsettings*.json
+!appsettings.json
+*.pfx
+*.publishsettings
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- Packages ---
+# No need to commit NuGet packages; they are restored via the .csproj
+*.nupkg
+# Package restore artifacts
+restore.dgstat.json
+project.assets.json
+project.nuget.cache

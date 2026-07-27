@@ -2,19 +2,19 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using System;
 
-namespace ExampleProject
+namespace ExampleProject.Selenium
 {
-    internal class BaseTest
+    // Base class for Selenium tests. Uses IWebDriver and provides common helpers/setup.
+    public abstract class BaseTest
     {
-        protected WebDriver driver;
+        protected IWebDriver driver = null!;
+        protected WebDriverWait wait = null!;
 
         protected static readonly string url = "https://the-internet.herokuapp.com/";
         protected static readonly string preciseTextXpath = "//*[text()='{0}']";
         protected static readonly string partialTextXpath = "//*[contains(text(),'{0}')]";
-        protected static readonly string relativePathFolder = @"Resources\"; //Path was fixed a little
-        protected WebDriverWait wait = null;
+        protected static readonly string relativePathFolder = "Resources";
         protected static readonly int maxWait = 10;
 
         [SetUp]
@@ -29,7 +29,7 @@ namespace ExampleProject
         [TearDown]
         public void TearDown()
         {
-            driver.Quit();
+            driver?.Dispose();
         }
     }
 }
