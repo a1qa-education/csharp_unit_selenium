@@ -3,17 +3,14 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-namespace ExampleProject.Selenium
+namespace ExampleProject
 {
-    // Base class for Selenium tests. Uses IWebDriver and provides common helpers/setup.
-    public abstract class BaseTest
+    internal abstract class BaseTest
     {
         protected IWebDriver driver = null!;
         protected WebDriverWait wait = null!;
 
         protected static readonly string url = "https://the-internet.herokuapp.com/";
-        protected static readonly string preciseTextXpath = "//*[text()='{0}']";
-        protected static readonly string partialTextXpath = "//*[contains(text(),'{0}')]";
         protected static readonly string relativePathFolder = "Resources";
         protected static readonly int maxWait = 10;
 

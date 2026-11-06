@@ -6,8 +6,8 @@ namespace ExampleProject.Selenium
 {
     internal class NestedFramesTests : BaseTest
     {
-        private static readonly By framesBtn = By.XPath(string.Format(preciseTextXpath, "Frames"));
-        private static readonly By nestedFramesBtn = By.XPath(string.Format(preciseTextXpath, "Nested Frames"));
+        private static readonly By framesBtn = By.LinkText("Frames");
+        private static readonly By nestedFramesBtn = By.LinkText("Nested Frames");
 
         [Test]
         public void NestedFramesTest()
@@ -21,7 +21,7 @@ namespace ExampleProject.Selenium
 
             // Switch to Right Frame
 
-            // Check Left frame text
+            // Check Right frame text
 
         }
     }
