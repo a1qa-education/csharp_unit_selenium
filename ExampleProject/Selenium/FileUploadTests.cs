@@ -5,7 +5,7 @@ namespace ExampleProject.Selenium
 {
     internal class FileUploadTests : BaseTest
     {
-        private static readonly By fileUploadBtn = By.XPath(string.Format(preciseTextXpath, "File Upload"));
+        private static readonly By fileUploadBtn = By.LinkText("File Upload");
         private static readonly string fileName = "ExampleFile.txt";
         private static readonly string filePath = Path.Combine(relativePathFolder, fileName);
 

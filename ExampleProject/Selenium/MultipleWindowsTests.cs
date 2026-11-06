@@ -6,8 +6,8 @@ namespace ExampleProject.Selenium
 {
     internal class MultipleWindowsTests : BaseTest
     {
-        private static readonly By multipleWindowsLinkLoc = By.XPath(string.Format(preciseTextXpath, "Multiple Windows"));
-        private static readonly By clickHereLinkLoc = By.XPath(string.Format(preciseTextXpath, "Click Here"));
+        private static readonly By multipleWindowsLinkLoc = By.LinkText("Multiple Windows");
+        private static readonly By clickHereLinkLoc = By.LinkText("Click Here");
 
         [Test]
         public void MultipleWindowsTest()

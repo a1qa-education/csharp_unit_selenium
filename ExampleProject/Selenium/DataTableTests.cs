@@ -5,7 +5,7 @@ namespace ExampleProject.Selenium
 {
     internal class DataTableTests : BaseTest
     {
-        private static readonly By sortableDataTables = By.XPath(string.Format(preciseTextXpath, "Sortable Data Tables"));
+        private static readonly By sortableDataTables = By.LinkText("Sortable Data Tables");
 
         [Test]
         public void DataTableTest()

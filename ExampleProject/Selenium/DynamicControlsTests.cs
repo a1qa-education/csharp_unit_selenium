@@ -5,8 +5,8 @@ namespace ExampleProject.Selenium
 {
     internal class DynamicControlsTests : BaseTest
     {
-        private static readonly By dynamicControl = By.XPath(string.Format(preciseTextXpath, "Dynamic Controls"));
-        private static readonly By enableBtn = By.XPath(string.Format(preciseTextXpath, "Enable"));
+        private static readonly By dynamicControl = By.LinkText("Dynamic Controls");
+        private static readonly By enableBtn = By.XPath("//button[normalize-space(text())='Enable']");
 
         [Test]
         public void DynamicControlsTest()

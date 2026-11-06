@@ -8,8 +8,8 @@ namespace ExampleProject.Selenium
         //Make sure that the name of the file is present on the page before running the test
         private static readonly string fileName = "test.txt";
 
-        private static readonly By fileDownloadBtn = By.XPath(string.Format(preciseTextXpath, "File Download"));
-        private static readonly By fileNameField = By.XPath(string.Format(preciseTextXpath, fileName));
+        private static readonly By fileDownloadBtn = By.LinkText("File Download");
+        private static readonly By fileNameField = By.XPath($"//a[text()='{fileName}']");
 
         private static readonly string filePath = Path.Combine(relativePathFolder, fileName);
         private static readonly FileInfo downloadedFile = new(Path.GetFullPath(filePath));
